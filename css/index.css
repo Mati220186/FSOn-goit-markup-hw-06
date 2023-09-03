@@ -569,17 +569,23 @@ a {
 .close-btn-box {
   display: flex;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 24px;
+  right: 24px;
   width: 30px;
   height: 30px;
-  background-color: var(--modal-background);
+  background-color: var(--acent);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
   fill: var(--hero-background);
   align-items: center;
   justify-content: center;
+}
+.close-btn-box:hover .close-btn {
+  fill: var(--white-background);
+}
+.close-btn-box:hover {
+  background-color: var(--pressed-state);
 }
 .close-btn {
   width: 8px;
@@ -658,7 +664,7 @@ a {
   width: 169px;
   display: inline-flex;
   padding: 16px 32px;
-  align-items: flex-startce;
+  align-items: center;
   gap: 10px;
   border-radius: 4px;
   background: var(--IRIS, #4d5ae5);
@@ -673,6 +679,12 @@ a {
   font-weight: 500;
   line-height: 24px; /* 150% */
   letter-spacing: 0.64px;
+  cursor: pointer;
+}
+.button-send-box {
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
 }
 .icon-form {
   position: absolute;
@@ -698,8 +710,111 @@ a {
 
 .label-form:hover {
   fill: var(--primary-brand);
+  transition: 250ms ease-in-out;
 }
 
 .input-label:hover {
   border-color: var(--primary-brand);
+  transition: 250ms ease-in-out;
+}
+.comment-textarea {
+  flex-shrink: 0;
+  resize: none;
+  padding-top: 8px;
+  padding-left: 16px;
+  color: rgba(46, 47, 66, 0.4);
+
+  /* Small Text */
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 116.667% */
+  letter-spacing: 0.48px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+}
+.comment-textarea:focus {
+  border-color: var(--primary-brand);
+}
+.privacy {
+  text-decoration-line: underline;
+  cursor: pointer;
+  color: var(--primary-brand);
+}
+.policy-box {
+  display: flex;
+}
+.policy text {
+  display: flex;
+
+  /* Link Text */
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+}
+input[type="checkbox"] {
+  appearance: none;
+}
+.icon-alt {
+  fill: none;
+  stroke: #2e2f42;
+  width: 15px;
+  height: 15px;
+}
+input:checked + .icon-alt {
+  fill: var(--primary-brand);
+  background-color: red;
+}
+.subscribe-form {
+  display: flex;
+}
+.email-footer {
+  width: 264px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid var(--white, #fff);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background-color: #2e2f42;
+  color: white;
+  margin-right: 24px;
+}
+.subscribe-btn-footer {
+  width: 165px;
+  height: 40px;
+  border-style: none;
+  border-radius: 4px;
+  display: inline-flex;
+  padding: 8px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--primary-brand);
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+  cursor: pointer;
+  transition-property: background-color;
+  transition: var(--default-timing-function);
+}
+.icon-send {
+  fill: var(--modal-background);
+}
+.btn-footer-text {
+  color: var(--WHITE, #fff);
+  text-align: center;
+
+  /* Button Text */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.64px;
 }
